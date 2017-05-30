@@ -58,8 +58,9 @@
 										leaders like Amazon and Netflix, and add real values to customers. A variety
 										of approaches for building recommender systems have been developed and achieved
 										significant success, and this project aims at implementing a few popular models
-										in the field to better understand their performances and the potential in 
-										recommending movies to particular customers.</p>		
+										in the field to better understand their performances and the potential. 
+										The focus is on accurately predicting the ratings, which is closely related to
+										the problem of recommending the best possible movies to a user.</p>		
 <!-- 										<ul class="actions">
 											<li><a href="generic.html" class="button">Learn More</a></li>
 										</ul> -->
@@ -187,8 +188,24 @@
 									  <li>Tea</li>
 									  <li>Milk</li>
 									</ul>   -->
-									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+									<p>As suggested by [1] and supported by the results discussed above, neighborhood
+									methods and latent factor models have complementary strengths and weaknesses, so a combined
+									model that improves prediction accuracy can be developed. In [1], following the preliminaries
+									and related work, the focus of the rest of the paper is on introducing a new, more
+									accurate neighborhood model, useful extensions of the SVD-based latent factor models,
+									and finally contributing to a single framework.</p>
+									<p>My future work is therefore continuing studying of these improved models. In particular, for 
+									neighborhood models, global weights (rather than user-specific weights) and implicit feedback 
+									could be included; for latent factor models, Asymmetric-SVD (representing users through the
+									items they prefer rather than expressing users in a latent feature space), and SVD++ (continuing
+									modeling users as latent features while adding implicit feedback) would offer enhancements. 
+									Finally, an integrated model incorporating both, solved by minimizing the regularized
+									error function could be experimented.</p>
+									<p>Besides the methods discussed, there have been a lot of new developments in the field. For
+									example, Restricted Boltzmann Machines provide another kind of latent factor approach that can be used.
+									Moreover, different algorithms could be combined to provide a single rating through the ensemble methods.
+									One thing to note throughout further studying and implementing more complex models is the possible
+									computational bottlenecks involved.</p>
 								</header>
 								<footer class="major">
 									<ul class="actions">
