@@ -51,8 +51,8 @@
 										<p>On the internet, the number of choices is overwhelming, and we need effective 
 										information filtering systems to prioritize and personalize the information.
 										Recommender systems deal with the problem of information overload by filtering
-										vital information fragment out according to user's preferences, interest, or
-										observed behavior about item. We want to know whether a particular user would 
+										vital information fragment out according to user's preferences, interests, or
+										observed behaviors about item. We want to know whether a particular user would 
 										prefer an item or not.</p>
 										<p>Recommender systems are important - they drive the revenues of E-commerce
 										leaders like Amazon and Netflix, and add real values to customers. A variety
@@ -81,18 +81,21 @@
 										<p>In general, recommender systems are based on one of two strategies.
 										The content filtering approach constructs a profile for each user (e.g., demographic information) or movie (e.g., genres).
 										In associating similarities of profiles and learning user preferences, movies "similar" to user preferences 
-										can be recommended.</p>
+										are expected to be rated highly.</p>
 										<p>The collaborative filtering relies only on past user bahavior (e.g., movie ratings), without
 										requiring the creation of explicit profiles. It calculates similarity between items or users based on ratings. 
-										On the one hand, it can address data aspects that are often elusive and difficult to profile. External information
-										for creating profiles might not be always available as well.
+										On the one hand, it can address data aspects that are often elusive and difficult to profile. It is helpful 
+										when external information for creating profiles is not available.	
 										On the other hand, it suffers from the "cold-start" problem due to its inability to address the
 										system's new products and users.</p>	
 										<p>The two primariy areas of collaborative filtering are the neighborhood methods and latent factor models.
 										Neighborhood methods compute the relationships between items or users. In the item-based approach, a movie's
 										neighbors are those tend to get similar ratings by the same user. Item-based approach has better scalability and
-										reasonings for explaining compared to user-based one. </p>
-										<p>Latent factor models learns hidden features inferred from the ratings patterns. Matrix factorization is popular 
+										reasonings for explaining compared to the user-based one, so I selected the item-based approach for constructing
+										the model of neighborhood methods.</p>
+										<p>Latent factor models learn hidden features inferred from the ratings patterns. Hidden features are those that 
+										contrast with human-made ones (such as movie genres); some of them are obvious, while others are in less obvious 
+										dimensions, for instance, "depth of character development" of a movie. Matrix factorization is popular 
 										in recent years due to its good scalability and predictive accuracy. It allows incorporation of implicit feedback
 										as the explicit feedback (ratings) often only comprises a sparse matrix, since any single user
 										is likely to have rated only a small percentage of possible items.</p>			
@@ -103,8 +106,10 @@
 										<h3>Dataset</h3>
 										<p>MovieLens 100K Dataset, collected by the GroupLens Research Project at the University of Minnesota, 
 										consists of 100,000 ratings (1-5) from 943 users on 1682 movies. Each user has rated at least 20 movies,
-										with users and items numbered consecutively from 1. Besides this full dataset, demographic information
-										about the users, and information about the movies are also provided.</p>
+										with users and items numbered consecutively from 1. A data entry looks like "UserID, MovieID, Rating, Timestamp."	
+										Besides this full dataset, demographic information about the users, and information about the movies 
+										are also provided in separate files.</p>
+										
 									</li>	
 									<li>
 										<span class="icon major style5 fa-code"></span>
@@ -128,11 +133,11 @@
 								<header class="major">
 									<h2>Result and Discussion</h2>
 									<p>The dataset was split into a training set and a testing set with exactly 10 
-									ratings per user in the testing set.
+									ratings per user in the testing set, which are disjoint.
 									A total of 6 models were implemented in Python, covering algorithms discussed
-									above. Each model is trained on the training set, and accuracies were measured
+									above. Each model was trained on the training set, and accuracies were measured
 									by Root Mean Squared Error (RMSE) on the testing set. Please see more detailed
-									descriptions and formulations of each model in the full report. The table below
+									descriptions and formulations of each model in the report. The table below
 									summarizes the result.</p>
 								</header>
 <!-- 								<ul class="statistics">
@@ -165,8 +170,8 @@
 								Neighborhood methods and latent factor models gave more accurate
 								results, as they make users and items directly comparable by either looking into similarities (neighborhood),
 								or transforming both to the same latent factor space. The two simplified models serve as baseline comparisons and have high RMSE
-								as they over-simplified important assumptions. Both models suffer from the cold-start problem compared to the 
-								content-based method, but as the MovieLens dataset has enough data it was not a concern. 
+								as they over-simplified important assumptions. Both Neighborhood methods and latent factor models suffer from the cold-start problem compared to the 
+								content-based method, but as the MovieLens dataset has enough data, it was not a concern. 
 								As will be discussed below, neighborhood and latent factor approaches address quite different levels of
 								structure in the data, and have different strengths in localized relationships versus overall structure,
 								so none of them is optimal on its own [1].</p>
@@ -205,7 +210,8 @@
 									example, Restricted Boltzmann Machines provide another kind of latent factor approach that can be used.
 									Moreover, different algorithms could be combined to provide a single rating through the ensemble methods.
 									One thing to note, however, is that throughout further studying and implementing more complex models
-									computational bottlenecks might easily come up.</p>
+									computational bottlenecks might easily come up. In that case I would need to consider implementing 
+									in lower-level programming languages and seek relevant toolkits in training time.</p>
 								</header>
 								<footer class="major">
 									<ul class="actions">
