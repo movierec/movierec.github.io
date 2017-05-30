@@ -72,7 +72,7 @@
 								<header class="major">
 									<h2>Data and Approach</h2>
 								</header>
-								<ul class="features">
+								<ul class="features">		
 									<li>
 										<span class="icon major style1 fa-copy"></span>
 										<h3>Dataset</h3>
@@ -80,6 +80,14 @@
 										consists of 100,000 ratings (1-5) from 943 users on 1682 movies. Each user has rated at least 20 movies,
 										with users and items numbered consecutively from 1. Besides this full dataset, demographic information
 										about the users, and information about the movies are also provided.</p>
+									</li>	
+									<li>
+										<span class="icon major style5 fa-code"></span>
+										<h3>Models</h3>
+										<p>Under content filtering approach, Random Forest and Logistic Regression were performed by treating each rating
+										as a training instance for prediction. Each instance has a single feature vector of 49 binary attributes.
+										Under collaborative filtering approach, the Item-based neighborhood model and the Latent Factor Model using
+										Singular Value Decomposition (SVD) with Stochastic Gradient Descent (SGD) were developed. </p>								
 									</li>
 									<li>
 										<span class="icon major style3 fa-diamond"></span>
@@ -98,14 +106,6 @@
 										neighbors are those tend to get similar ratings by the same user. Latent factor models learns hidden features
 										inferred from the ratings patterns. Matrix factorization is popular in recent years due to its good scalability
 										and predictive accuracy.</p>	
-									</li>
-									<li>
-										<span class="icon major style5 fa-code"></span>
-										<h3>Models</h3>
-										<p>Under content filtering approach, Random Forest and Logistic Regression were performed by treating each rating
-										as a training instance for prediction. Each instance has a single feature vector of 49 binary attributes.
-										Under collaborative filtering approach, the Item-based neighborhood model and the Latent Factor Model using
-										Singular Value Decomposition (SVD) with Stochastic Gradient Descent (SGD) were developed. </p>								
 									</li>
 								</ul>
 								<footer class="major">
