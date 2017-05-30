@@ -157,7 +157,20 @@
 									</li>
 								</ul> -->
 								<span class="image"><img src="images/result.JPG" alt="" /></span>
-								<p class="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
+								<p class="content">The regression models rely on feature-based predictors therefore
+								might suffer from the problem of not having enough features at the granularity
+								required to capture individual tastes and subtle differences between movies and 
+								users.</p>
+								<p class="content">Neighborhood methods and latent factor models gave more accurate
+								results, as they make users and items directly comparable by either looking into similarities (neighborhood),
+								or transforming both to the same latent factor space. The two simplified models serve as baseline comparisons and have high RMSE
+								as they over-simplified important assumptions. Both models suffer from the cold-start problem compared to the 
+								content-based method, but as the MovieLens dataset has enough data it was not a concern. </p>
+								<p class="content">As will be discussed below, neighborhood and latent factor approaches address quite different levels of
+								structure in the data, and have different strengths in localized relationships versus overall structure,
+								so none of them is optimal on its own [1].</p>
+								
+						
 								<footer class="major">
 <!-- 									<ul class="actions">
 										<li><a href="generic.html" class="button">Learn More</a></li>
@@ -190,8 +203,9 @@
 					<footer id="footer">
 						<section>
 							<h2>Reference</h2>
-							<p>The implementations are primariy based on Y.Koren's 2008 "Factorization Meets the Neighborhood: a Multifaceted Collaborative Filtering Model."</p>
-							<a href="http://dl.acm.org/citation.cfm?id=1401944">Please follow the link for the paper</a>
+							<p>The implementations are primariy based on</p>								
+							<a href="http://dl.acm.org/citation.cfm?id=1401944">[1] Y.Koren's "Factorization Meets the Neighborhood: a Multifaceted Collaborative Filtering Model.",2008</a>							
+							<a href="https://grouplens.org/datasets/movielens/100k/">MovieLens 100K Dataset</a>
 <!-- 							<ul class="actions">
 								<li><a href="generic.html" class="button">Learn More</a></li>
 							</ul> -->
