@@ -74,7 +74,7 @@
 								</header>
 								<ul class="features">
 									<li>
-										<span class="icon major style1 fa-code"></span>
+										<span class="icon major style1 fa-copy"></span>
 										<h3>Dataset</h3>
 										<p>MovieLens 100K Dataset, collected by the GroupLens Research Project at the University of Minnesota, 
 										consists of 100,000 ratings (1-5) from 943 users on 1682 movies. Each user has rated at least 20 movies,
@@ -82,12 +82,27 @@
 										about the users, and information about the movies are also provided.</p>
 									</li>
 									<li>
-										<span class="icon major style3 fa-copy"></span>
+										<span class="icon major style3 fa-diamond"></span>
 										<h3>Approach</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+										<p>In general, recommender systems are based on one of two strategies.</p>
+										<p>The content filtering approach constructs a profile for each user or product. For example, user profiles
+										might include occupations and age groups, and movie profiles might include genres and release date. In 
+										associating similarities of profiles and learning user preferences, movies "similar" to user preferences 
+										can be recommended.</p>
+										<p>The collaborative filtering relies only on past user bahavior, for example, product ratings, without
+										requiring the creation of explicit profiles. It is based on the similarity between items or users calculated
+										using users' ratings of items. It might be preferrable to the content-based approach because it can address 
+										data aspects that are often elusive and difficult to profile, or the external information of profiles is not 
+										available. On the other hand, it suffers from the "cold-start" problem due to its inability to address the
+										system's new products and users.</p>
+										<p>The two primariy areas of collaborative filtering are the neighborhood methods and latent factor models.
+										Neighborhood methods compute the relationships between items or users, and in the item-based approach, a movie's
+										neighbors are those tend to get similar ratings by the same user. Latent factor models tries to learn hidden features
+										inferred from the ratings patterns. Matrix factorization is popular in recent years due to its good scalability
+										and predictive accuracy.</p>	
 									</li>
 									<li>
-										<span class="icon major style5 fa-diamond"></span>
+										<span class="icon major style5 fa-code"></span>
 										<h3>Models</h3>
 										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
 									</li>
