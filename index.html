@@ -72,7 +72,30 @@
 								<header class="major">
 									<h2>Data and Approach</h2>
 								</header>
-								<ul class="features">		
+								<ul class="features">	
+									<li>
+										<span class="icon major style3 fa-diamond"></span>
+										<h3>Approach</h3>
+										<p>In general, recommender systems are based on one of two strategies.
+										The content filtering approach constructs a profile for each user (e.g., demographic information) or movie (e.g., genres).
+										In associating similarities of profiles and learning user preferences, movies "similar" to user preferences 
+										can be recommended.</p>
+										<p>The collaborative filtering relies only on past user bahavior (e.g., movie ratings), without
+										requiring the creation of explicit profiles. It calculates similarity between items or users based on ratings. 
+										On the one hand, it can address data aspects that are often elusive and difficult to profile. External information
+										for creating profiles might not be always available as well.
+										On the other hand, it suffers from the "cold-start" problem due to its inability to address the
+										system's new products and users.</p>	
+										<p>The two primariy areas of collaborative filtering are the neighborhood methods and latent factor models.
+										Neighborhood methods compute the relationships between items or users. In the item-based approach, a movie's
+										neighbors are those tend to get similar ratings by the same user. Item-based approach has better scalability and
+										reasonings for explaining compared to user-based one. </p>
+										<p>Latent factor models learns hidden features inferred from the ratings patterns. Matrix factorization is popular 
+										in recent years due to its good scalability and predictive accuracy. It allows incorporation of implicit feedback
+										as the explicit feedback (ratings) often only comprises a sparse matrix, since any single user
+										is likely to have rated only a small percentage of possible items.</p>			
+											
+									</li>
 									<li>
 										<span class="icon major style1 fa-copy"></span>
 										<h3>Dataset</h3>
@@ -89,24 +112,7 @@
 										Under collaborative filtering approach, the Item-based neighborhood model and the Latent Factor Model using
 										Singular Value Decomposition (SVD) with Stochastic Gradient Descent (SGD) were developed. </p>								
 									</li>
-									<li>
-										<span class="icon major style3 fa-diamond"></span>
-										<h3>Approach</h3>
-										<p>In general, recommender systems are based on one of two strategies.
-										The content filtering approach constructs a profile for each user (e.g., demographic information) or movie (e.g., genres).
-										In associating similarities of profiles and learning user preferences, movies "similar" to user preferences 
-										can be recommended.
-										The collaborative filtering relies only on past user bahavior (e.g., movie ratings), without
-										requiring the creation of explicit profiles. It calculates similarity between items or users through ratings. 
-										On the one hand, it can address data aspects that are often elusive and difficult to profile.
-										On the other hand, it suffers from the "cold-start" problem due to its inability to address the
-										system's new products and users.	
-										The two primariy areas of collaborative filtering are the neighborhood methods and latent factor models.
-										Neighborhood methods compute the relationships between items or users. In the item-based approach, a movie's
-										neighbors are those tend to get similar ratings by the same user. Latent factor models learns hidden features
-										inferred from the ratings patterns. Matrix factorization is popular in recent years due to its good scalability
-										and predictive accuracy.</p>	
-									</li>
+									
 								</ul>
 								<footer class="major">
 									<ul class="actions">
