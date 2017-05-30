@@ -2844,20 +2844,18 @@
 
 		.features li {
 /* 			width: calc(50% - 2em); */
-			width: calc(50% - 2em, 50% - 2em, 100%);
 			margin-left: 2em;
 			margin-top: 3em;
 			padding: 0;
 		}
-
 			.features li:nth-child(1), .features li:nth-child(2) {
+				width: calc(50% - 2em);
 				margin-top: 0;
 			}
                         .features li:nth-child(3) {
+				width: 100%;
 				margin-top: 0;			
 			}
-
-
 			.features li > :last-child {
 				margin-bottom: 0;
 			}
